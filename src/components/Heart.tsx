@@ -1,7 +1,7 @@
-import * as React from 'react';
-import styled, { keyframes } from 'styled-components';
-import { rounderDefaults } from '../constants';
-import { RounderProps } from '../types';
+import * as React from "react";
+import styled, { keyframes } from "styled-components";
+import { rounderDefaults } from "../constants";
+import { RounderProps } from "../types";
 
 const animation = keyframes`
   0% {
@@ -43,7 +43,7 @@ const Container = styled.div<RounderProps>`
   }
   & div:after,
   & div:before {
-    content: ' ';
+    content: " ";
     position: absolute;
     display: block;
     width: ${(props) => props.size}px;
@@ -60,7 +60,7 @@ const Container = styled.div<RounderProps>`
   }
 `;
 
-const Heart = ({ size = 32, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
+const Heart = ({ size = 24, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
   return (
     <Container size={size} color={color}>
       <div></div>

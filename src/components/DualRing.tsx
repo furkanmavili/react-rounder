@@ -1,7 +1,7 @@
-import * as React from 'react';
-import styled, { keyframes } from 'styled-components';
-import { rounderDefaults } from '../constants';
-import { RounderProps } from '../types';
+import * as React from "react";
+import styled, { keyframes } from "styled-components";
+import { rounderDefaults } from "../constants";
+import { RounderProps } from "../types";
 
 const animation = keyframes`
   0% {
@@ -18,7 +18,7 @@ const Container = styled.div<RounderProps>`
   height: ${(props) => props.size}px;
 
   &::after {
-    content: ' ';
+    content: " ";
     display: block;
     width: 100%;
     border-radius: 50%;

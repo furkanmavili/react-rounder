@@ -1,7 +1,7 @@
-import * as React from 'react';
-import styled, { keyframes } from 'styled-components';
-import { rounderDefaults } from '../constants';
-import { RounderProps } from '../types';
+import * as React from "react";
+import styled, { keyframes } from "styled-components";
+import { rounderDefaults } from "../constants";
+import { RounderProps } from "../types";
 
 const animation = keyframes`
     0% {
@@ -87,7 +87,7 @@ const Container = styled.div<RounderProps>`
   height: ${(props) => (props.size ? props.size * 3 : 48)}px;
 `;
 
-const Tail = ({ size = 16, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
+const Tail = ({ size = 14, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
   return (
     <Container size={size}>
       <ItemWrapper size={size} color={color}>
