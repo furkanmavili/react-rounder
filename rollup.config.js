@@ -1,24 +1,26 @@
-import typescript from 'rollup-plugin-typescript2';
-import { babel } from '@rollup/plugin-babel';
-import commonjs from '@rollup/plugin-commonjs';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import pkg from './package.json';
-
-const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
+import typescript from "rollup-plugin-typescript2";
+import { babel } from "@rollup/plugin-babel";
+import commonjs from "@rollup/plugin-commonjs";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import { terser } from "rollup-plugin-terser";
+import pkg from "./package.json";
+import multiInput from "rollup-plugin-multi-input";
+const createStyledComponentsTransformer = require("typescript-plugin-styled-components").default;
 const styledComponentsTransformer = createStyledComponentsTransformer();
 
 export default {
-  input: 'src/index.tsx',
+  input: ["src/index.tsx", "src/**/*.tsx"],
   output: [
     {
-      file: pkg.main,
-      format: 'cjs',
-      exports: 'named',
-      sourcemap: true,
+      dir: "dist",
+      plugins: [terser()],
+      format: "cjs",
+      exports: "named",
       strict: false
     }
   ],
   plugins: [
+    multiInput(),
     nodeResolve(),
     typescript({
       objectHashIgnoreUnknownHack: true,
@@ -31,10 +33,10 @@ export default {
 
     commonjs(),
     babel({
-      presets: ['@babel/preset-env', '@babel/preset-react'],
+      presets: ["@babel/preset-env", "@babel/preset-react"],
       plugins: [
         [
-          'babel-plugin-styled-components',
+          "babel-plugin-styled-components",
           {
             minify: true,
             pure: true,
@@ -44,5 +46,5 @@ export default {
       ]
     })
   ],
-  external: ['react', 'react-dom']
+  external: ["react", "react-dom"]
 };
