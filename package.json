@@ -1,13 +1,9 @@
 {
   "name": "react-rounder",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A collection of rounding components based on styled-components ",
-  "main": "dist/index.js",
+  "main": "./index.js",
   "dependencies": {},
-  "files": [
-    "dist/**/*.js",
-    "dist/**/*.ts"
-  ],
   "devDependencies": {
     "@babel/core": "^7.14.5",
     "@babel/preset-env": "^7.14.5",
@@ -46,9 +42,8 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "prepare": "husky install",
-    "prepublishOnly": "npm run build && cp -r ./dist/* . && rm -rf ./dist",
-    "postpublish": "git clean -fd"
+    "pack": "rm -rf ./*.tgz && npm run build && cp package.json dist/package.json && npm pack ./dist",
+    "pub": "npm publish $(node -p \"p=require('./package.json');p.name+'-'+p.version+'.tgz'\")"
   },
   "author": "Furkan Mavili",
   "license": "MIT",
