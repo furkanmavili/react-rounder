@@ -1,6 +1,6 @@
 {
   "name": "react-rounder",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A collection of rounding components based on styled-components ",
   "main": "dist/index.js",
   "dependencies": {},
@@ -46,7 +46,9 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepublishOnly": "npm run build && cp -r ./dist/* . && rm -rf ./dist",
+    "postpublish": "git clean -fd"
   },
   "author": "Furkan Mavili",
   "license": "MIT",
