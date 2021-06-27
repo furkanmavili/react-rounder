@@ -5,7 +5,7 @@
 
 ## Demo
 
-[Preview]()
+[Preview](https://furkanmavili.github.io/react-rounder/)
 
 ## Installation
 
