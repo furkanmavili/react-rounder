@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled, { keyframes } from "styled-components";
-import { rounderDefaults } from "../constants";
-import { RounderProps } from "../types";
+import { rounderDefaults } from "./constants";
+import { RounderProps } from "./types";
 
 const animationChase = keyframes`
    100% { transform: rotate(360deg); } 
