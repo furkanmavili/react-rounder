@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "dependencies": {},
   "files": [
-    "dist"
+    "dist/**/*.js",
+    "dist/**/*.ts"
   ],
   "devDependencies": {
     "@babel/core": "^7.14.5",
