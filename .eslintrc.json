@@ -22,5 +22,5 @@
       "version": "detect"
     }
   },
-  "ignorePatterns": ["rollup.config.js", "/dist"]
+  "ignorePatterns": ["rollup.config.js", "/dist", "/docs"]
 }
