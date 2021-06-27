@@ -1,7 +1,7 @@
 {
   "name": "react-rounder",
   "version": "1.0.0",
-  "description": "A collection of simple spinners for react",
+  "description": "A collection of rounding components based on styled-components ",
   "main": "dist/index.js",
   "dependencies": {},
   "files": [

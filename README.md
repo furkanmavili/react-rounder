@@ -1,6 +1,6 @@
 # React Rounder
 
-> Collection of rounding components based on styled-components
+> A collection of rounding components based on styled-components
 
 
 ## Demo
