@@ -48,7 +48,7 @@
     "prepare": "husky install"
   },
   "author": "Furkan Mavili",
-  "license": "ISC",
+  "license": "MIT",
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
