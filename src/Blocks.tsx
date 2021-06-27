@@ -92,20 +92,22 @@ const Block = styled.div<RounderProps>`
     animation-delay: ${(0 * 2) / 8}s;
   }
 `;
-const Blocks = ({ size = 64, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
+const Blocks = ({ show = true, size = 64, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
   return (
-    <Container size={size} color={color}>
-      <Block size={size} color={color}>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </Block>
-    </Container>
+    show && (
+      <Container size={size} color={color}>
+        <Block size={size} color={color}>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </Block>
+      </Container>
+    )
   );
 };
 

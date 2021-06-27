@@ -59,14 +59,16 @@ const Container = styled.div<RounderProps>`
   }
 `;
 
-const Fold = ({ size = 40, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
+const Fold = ({ show = true, size = 40, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
   return (
-    <Container size={size} color={color}>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </Container>
+    show && (
+      <Container size={size} color={color}>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </Container>
+    )
   );
 };
 

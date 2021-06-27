@@ -40,14 +40,16 @@ const Container = styled.div<RounderProps>`
   }
 `;
 
-const Ring = ({ size = 48, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
+const Ring = ({ show = true, size = 48, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
   return (
-    <Container size={size} color={color}>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </Container>
+    show && (
+      <Container size={size} color={color}>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </Container>
+    )
   );
 };
 

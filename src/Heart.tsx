@@ -60,11 +60,13 @@ const Container = styled.div<RounderProps>`
   }
 `;
 
-const Heart = ({ size = 24, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
+const Heart = ({ show = true, size = 24, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
   return (
-    <Container size={size} color={color}>
-      <div></div>
-    </Container>
+    show && (
+      <Container size={size} color={color}>
+        <div></div>
+      </Container>
+    )
   );
 };
 

@@ -78,16 +78,18 @@ const Container = styled.div<RounderProps>`
   }
 `;
 
-const Chase = ({ size = 40, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
+const Chase = ({ show = true, size = 40, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
   return (
-    <Container size={size} color={color}>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </Container>
+    show && (
+      <Container size={size} color={color}>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </Container>
+    )
   );
 };
 

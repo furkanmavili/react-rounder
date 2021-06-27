@@ -34,12 +34,14 @@ const Container = styled.div<RounderProps>`
   }
 `;
 
-const Bounce = ({ size = 64, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
+const Bounce = ({ show = true, size = 64, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
   return (
-    <Container size={size} color={color}>
-      <div></div>
-      <div></div>
-    </Container>
+    show && (
+      <Container size={size} color={color}>
+        <div></div>
+        <div></div>
+      </Container>
+    )
   );
 };
 
