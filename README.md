@@ -7,7 +7,7 @@
 
 > A collection of rounding components based on styled-components
 
-
+![image](https://github.com/furkanmavili/blob/master/rounder.gif)
 
 ## Demo
 
