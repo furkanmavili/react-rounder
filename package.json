@@ -3,7 +3,13 @@
   "version": "1.0.4",
   "description": "A collection of rounding components based on styled-components ",
   "main": "./index.js",
-  "dependencies": {},
+  "keywords": [
+    "react-rounder",
+    "react-spinners",
+    "react-loaders",
+    "spinners",
+    "loaders"
+  ],
   "devDependencies": {
     "@babel/core": "^7.14.5",
     "@babel/preset-env": "^7.14.5",
@@ -42,7 +48,7 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "pack": "rm -rf ./*.tgz && npm run build && cp package.json dist/package.json && npm pack ./dist",
+    "pack": "rm -rf ./*.tgz && npm run build && cp package.json dist/package.json && cp README.md dist/README.md && npm pack ./dist",
     "pub": "npm publish $(node -p \"p=require('./package.json');p.name+'-'+p.version+'.tgz'\")"
   },
   "author": "Furkan Mavili",

@@ -1,6 +1,12 @@
 # React Rounder
 
+[![npm version](https://badge.fury.io/js/react-rounder.svg)][npm_url]
+[![license](https://img.shields.io/npm/l/react-rounder.svg)][npm_url]
+[![downloads](https://img.shields.io/npm/dt/react-rounder.svg)][npm_url]
+
+
 > A collection of rounding components based on styled-components
+
 
 
 ## Demo
