@@ -29,15 +29,15 @@ const Container = styled.div<RounderProps>`
     animation: ${(props) => animation(props.size)} 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
   }
   & div:nth-child(1) {
-    left: ${(props) => (props.size ? props.size / 8 : 8)}px;
+    left: 0;
     animation-delay: -0.24s;
   }
   & div:nth-child(2) {
-    left: ${(props) => (props.size ? props.size / 2 : 32)}px;
+    left: ${(props) => (props.size ? props.size / 4 + 8 : 32)}px;
     animation-delay: -0.12s;
   }
   & div:nth-child(3) {
-    left: ${(props) => (props.size ? (props.size * 7) / 8 : 56)}px;
+    left: ${(props) => (props.size ? props.size / 2 + 16 : 56)}px;
     animation-delay: 0;
   }
 `;
