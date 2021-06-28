@@ -1394,9 +1394,9 @@ react-remove-scroll@2.4.1:
     use-sidecar "^1.0.1"
 
 react-rounder@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/react-rounder/-/react-rounder-1.0.4.tgz#f3d43a04d0b6879e682b6cd6d7c32906f97406cd"
-  integrity sha512-HpSw/6s2X0espBk2WHt8H5plyMxgt6MQxyBf85IsNZeC/TxAoW7febAPpFHdq9qkKlhLsXsI+YSnVTqHOXGw9A==
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-rounder/-/react-rounder-1.0.5.tgz#8fff0a4ef4a544c4f2163345a31299ca14d54495"
+  integrity sha512-sL+YZwgV+le0MMSIySJaDzob1xHiDHmEJIwXBXJWjm9HlEVkhBn/PajFjibrISQ2iVIBJYT8TyHOSSdmqf4QdQ==
 
 react-style-singleton@^2.1.0:
   version "2.1.1"
