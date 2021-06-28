@@ -92,7 +92,7 @@ const Block = styled.div<RounderProps>`
     animation-delay: ${(0 * 2) / 8}s;
   }
 `;
-const Blocks = ({ show = true, size = 64, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
+const Blocks = ({ show = true, size = 20, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
   return (
     show && (
       <Container size={size} color={color}>
