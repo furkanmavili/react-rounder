@@ -34,8 +34,8 @@ const Container = styled.div<RounderProps>`
 
   & div {
     position: absolute;
-    top: ${(props) => props.size}px;
-    left: ${(props) => props.size}px;
+    top: ${(props) => (props.size ? (props.size / 3) * 2 : props.size)}px;
+    left: ${(props) => (props.size ? (props.size / 3) * 2 : props.size)}px;
     width: ${(props) => props.size}px;
     height: ${(props) => props.size}px;
     background: ${(props) => props.color};
