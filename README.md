@@ -7,7 +7,7 @@
 
 > A collection of rounding components based on styled-components
 
-![image](https://github.com/furkanmavili/react-rounder/blob/master/rounder.gif)
+
 
 ## Demo
 
