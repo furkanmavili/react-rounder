@@ -1,9 +1,8 @@
+import { Container, VStack } from "@chakra-ui/react";
 import React from "react";
+import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
-import GithubIcon from "./components/GithubIcon";
-import { VStack, Container, Box } from "@chakra-ui/react";
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
         <Gallery />
         <Footer />
       </VStack>
-      <GithubIcon />
     </Container>
   );
 }

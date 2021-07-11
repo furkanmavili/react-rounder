@@ -1,21 +1,13 @@
-import { Button, Link } from "@chakra-ui/react";
+import { Box, Link } from "@chakra-ui/react";
 import React from "react";
-import { FaGithub } from "react-icons/fa/index";
+
 function GithubIcon() {
   return (
-    <Button
-      as={Link}
-      leftIcon={<FaGithub />}
-      pos="absolute"
-      href="https://github.com/furkanmavili/react-rounder"
-      right={4}
-      top={4}
-      isExternal
-      display="flex"
-      alignItems="center"
-    >
-      Github
-    </Button>
+    <Box display="flex" justifyContent="flex-end" >
+     <Link href="https://www.github.com/furkanmavili/react-rounder" target="_blank">
+        <img src="https://img.shields.io/github/stars/furkanmavili/react-rounder?style=social"/>
+     </Link>
+    </Box>
   );
 }
 

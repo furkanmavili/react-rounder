@@ -1,11 +1,11 @@
-import React, { useState } from "react";
 import { Badge, Box, Flex, SimpleGrid, Text, Tooltip, useToast } from "@chakra-ui/react";
+import React, { useState } from "react";
 import { rounders } from "../rounders";
 
 function Gallery() {
   return (
-    <Box as="main" w="full" flex={1}>
-      <SimpleGrid columns={[2, 3, 4]} spacing={5}>
+    <Box as="main" w="full" flex={1} py="8">
+      <SimpleGrid columns={[2, 4, 5]} spacing="5">
         {rounders.map((rounder, index) => (
           <Card key={index} rounder={rounder} index={index} />
         ))}

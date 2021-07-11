@@ -2,8 +2,9 @@
 
 ![npm version](https://badge.fury.io/js/react-rounder.svg)
 ![license](https://img.shields.io/npm/l/react-rounder.svg)
-![downloads](https://img.shields.io/npm/dt/react-rounder.svg)
-
+![downloads](https://img.shields.io/npm/dw/react-rounder)
+![size](https://img.shields.io/bundlephobia/min/react-rounder)
+![peer dependecy](https://img.shields.io/npm/dependency-version/react-rounder/peer/react)
 
 > A collection of rounding components based on styled-components
 

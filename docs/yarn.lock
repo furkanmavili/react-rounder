@@ -1393,10 +1393,10 @@ react-remove-scroll@2.4.1:
     use-callback-ref "^1.2.3"
     use-sidecar "^1.0.1"
 
-react-rounder@^1.0.4:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/react-rounder/-/react-rounder-1.0.5.tgz#8fff0a4ef4a544c4f2163345a31299ca14d54495"
-  integrity sha512-sL+YZwgV+le0MMSIySJaDzob1xHiDHmEJIwXBXJWjm9HlEVkhBn/PajFjibrISQ2iVIBJYT8TyHOSSdmqf4QdQ==
+react-rounder@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-rounder/-/react-rounder-1.1.0.tgz#81f5cfab99222e75305f4a41625019a7029e87e8"
+  integrity sha512-S24Ly/69wBKMwp+MK9m+op94F3KtqOUQFsaBdjQD7CztS/CooBvS84azmq0E+k0WBpc4gdr1yidMk5X+j0lHNg==
 
 react-style-singleton@^2.1.0:
   version "2.1.1"

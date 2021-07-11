@@ -1,6 +1,5 @@
-import React from "react";
 import {
-  Bars,
+  Ball, Bars,
   Blocks,
   Bounce,
   Chase,
@@ -8,16 +7,14 @@ import {
   Climb,
   Cube,
   Dots,
-  DualRing,
-  Fire,
-  Fold,
-  Heart,
+  DualRing, Filling, Fire,
+  Fold, Gooey, Heart,
   Jelly,
   Ring,
   Square,
-  Tail
+  Tail,
+  Triangle
 } from "react-rounder";
-
 export const rounders = [
   {
     title: "Bars",
@@ -82,5 +79,21 @@ export const rounders = [
   {
     title: "Tail",
     component: Tail
-  }
+  },
+  {
+    title: "Gooey",
+    component: Gooey
+  },
+  {
+    title: "Filling",
+    component: Filling
+  },
+  {
+    title: "Ball",
+    component: Ball
+  },
+  {
+    title: "Triangle",
+    component: Triangle
+  },
 ];
