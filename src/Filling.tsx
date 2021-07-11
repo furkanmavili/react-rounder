@@ -53,7 +53,7 @@ const Container = styled.div<RounderProps>`
   }
 `;
 
-const Filling = ({ show = true, size = 30, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
+const Filling = ({ show = true, size = 40, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
   return (
     show && (
       <Container size={size} color={color}>
