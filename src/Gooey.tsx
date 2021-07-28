@@ -24,8 +24,8 @@ const Container = styled.div<RounderProps>`
   animation: ${animation} 800ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
 `;
 
-const Gooey = ({ show = true, size = 40, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
-  return show && <Container size={size} color={color} />;
+const Gooey = ({ show = true, size = 40, color = rounderDefaults.color }: RounderProps): JSX.Element | null => {
+  return show ? <Container size={size} color={color} /> : null;
 };
 
 export { Gooey };

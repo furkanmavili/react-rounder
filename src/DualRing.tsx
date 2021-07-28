@@ -28,8 +28,8 @@ const Container = styled.div<RounderProps>`
   }
 `;
 
-const DualRing = ({ show = true, size = 48, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
-  return show && <Container size={size} color={color} />;
+const DualRing = ({ show = true, size = 48, color = rounderDefaults.color }: RounderProps): JSX.Element | null => {
+  return show ? <Container size={size} color={color} /> : null;
 };
 
 export { DualRing };

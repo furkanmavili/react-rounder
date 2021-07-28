@@ -25,9 +25,9 @@ const Container = styled.div<RounderProps>`
   width: ${(props) => props.size}px;
   height: ${(props) => (props.size ? props.size / 2 : 25)}px;
   position: relative;
-  display: flex;
   align-items: center;
   justify-content: center;
+  display: flex;
   & > div {
     width: 50%;
     height: 100%;
@@ -39,14 +39,12 @@ const Container = styled.div<RounderProps>`
   }
 `;
 
-const Ball = ({ show = true, size = 50, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
-  return (
-    show && (
-      <Container size={size} color={color}>
-        <div></div>
-      </Container>
-    )
-  );
+const Ball = ({ show = true, size = 50, color = rounderDefaults.color }: RounderProps): JSX.Element | null => {
+  return show ? (
+    <Container size={size} color={color} show={show}>
+      <div></div>
+    </Container>
+  ) : null;
 };
 
 export { Ball };

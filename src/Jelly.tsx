@@ -63,15 +63,13 @@ const Container = styled.div<RounderProps>`
   }
 `;
 
-const Jelly = ({ show = true, size = 48, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
-  return (
-    show && (
-      <Container size={size} color={color}>
-        <div></div>
-        <div></div>
-      </Container>
-    )
-  );
+const Jelly = ({ show = true, size = 48, color = rounderDefaults.color }: RounderProps): JSX.Element | null => {
+  return show ? (
+    <Container size={size} color={color}>
+      <div></div>
+      <div></div>
+    </Container>
+  ) : null;
 };
 
 export { Jelly };

@@ -34,16 +34,14 @@ const Container = styled.div<RounderProps>`
   }
 `;
 
-const Dots = ({ show = true, size = 64, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
-  return (
-    show && (
-      <Container size={size} color={color}>
-        <div></div>
-        <div></div>
-        <div></div>
-      </Container>
-    )
-  );
+const Dots = ({ show = true, size = 64, color = rounderDefaults.color }: RounderProps): JSX.Element | null => {
+  return show ? (
+    <Container size={size} color={color}>
+      <div></div>
+      <div></div>
+      <div></div>
+    </Container>
+  ) : null;
 };
 
 export { Dots };

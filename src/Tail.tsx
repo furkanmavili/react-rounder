@@ -87,23 +87,21 @@ const Container = styled.div<RounderProps>`
   height: ${(props) => (props.size ? props.size * 3 : 48)}px;
 `;
 
-const Tail = ({ show = true, size = 14, color = rounderDefaults.color }: RounderProps): React.ReactNode => {
-  return (
-    show && (
-      <Container size={size}>
-        <ItemWrapper size={size} color={color}>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </ItemWrapper>
-      </Container>
-    )
-  );
+const Tail = ({ show = true, size = 14, color = rounderDefaults.color }: RounderProps): JSX.Element | null => {
+  return show ? (
+    <Container size={size}>
+      <ItemWrapper size={size} color={color}>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </ItemWrapper>
+    </Container>
+  ) : null;
 };
 
 export { Tail };
