@@ -1,9 +1,10 @@
 import * as React from "react";
-import styled, { keyframes } from "styled-components";
 import { rounderDefaults } from "./constants";
 import { RounderProps } from "./types";
 
-const animationJelly = keyframes`
+import { styled as gstyled, keyframes as gkeyframes } from "goober";
+
+const animationJelly = gkeyframes`
   17% {
     border-bottom-right-radius: 10%;
   }
@@ -21,13 +22,13 @@ const animationJelly = keyframes`
     transform: translateY(0) rotate(90deg);
   }
 `;
-const animationShadow = keyframes`
+const animationShadow = gkeyframes`
   50% {
     transform: scale(1.25, 1);
   }
 `;
 
-const Container = styled.div<RounderProps>`
+const Container = gstyled("div")<RounderProps>`
   width: ${(props) => props.size}px;
   height: ${(props) => props.size}px;
   color: ${(props) => props.color};

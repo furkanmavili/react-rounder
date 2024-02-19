@@ -1,3 +1,8 @@
+import React from "react";
+import { setup } from "goober";
+
+setup(React.createElement);
+
 export { Ball } from "./Ball";
 export { Bars } from "./Bars";
 export { Blocks } from "./Blocks";

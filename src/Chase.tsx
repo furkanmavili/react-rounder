@@ -1,15 +1,15 @@
 import * as React from "react";
-import styled, { keyframes } from "styled-components";
 import { rounderDefaults } from "./constants";
 import { RounderProps } from "./types";
+import { styled as gstyled, keyframes as gkeyframes } from "goober";
 
-const animationChase = keyframes`
+const animationChase = gkeyframes`
    100% { transform: rotate(360deg); } 
 `;
-const animationDot = keyframes`
+const animationDot = gkeyframes`
   80%, 100% { transform: rotate(360deg); } 
 `;
-const animationDotBefore = keyframes`
+const animationDotBefore = gkeyframes`
   50% {
     transform: scale(0.4); 
   } 100%, 0% {
@@ -17,7 +17,7 @@ const animationDotBefore = keyframes`
   } 
 `;
 
-const Container = styled.div<RounderProps>`
+const Container = gstyled("div")<RounderProps>`
   width: ${(props) => props.size}px;
   height: ${(props) => props.size}px;
   position: relative;

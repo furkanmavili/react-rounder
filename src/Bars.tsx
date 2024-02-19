@@ -1,22 +1,24 @@
 import * as React from "react";
-import styled, { keyframes } from "styled-components";
+import { styled as gstyled, keyframes as gkeyframes } from "goober";
 import { rounderDefaults } from "./constants";
 import { RounderProps } from "./types";
 
-const animation = (height: number | undefined) => keyframes`
+const animation = gkeyframes`
   0% {
     top: 8px;
-    height: ${height ? height : 64}px;
+    height: var(--size);
+
   }
   50%, 100% {
     top: 24px;
-    height: ${height ? height / 2 : 32}px;
+    height: calc(var(--size) - 16px);
   }
 `;
 
-const Container = styled.div<RounderProps>`
+const Container = gstyled("div")<RounderProps>`
   display: inline-block;
   position: relative;
+  --size: ${(props) => props.size}px;
   width: ${(props) => props.size}px;
   height: ${(props) => props.size}px;
 
@@ -26,7 +28,7 @@ const Container = styled.div<RounderProps>`
     left: 8px;
     width: ${(props) => (props.size ? props.size / 4 : 16)}px;
     background: ${(props) => props.color};
-    animation: ${(props) => animation(props.size)} 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+    animation: ${animation} 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
   }
   & div:nth-child(1) {
     left: 0;

@@ -1,9 +1,9 @@
+import { styled as gstyled, keyframes as gkeyframes } from "goober";
 import * as React from "react";
-import styled, { keyframes } from "styled-components";
 import { rounderDefaults } from "./constants";
 import { RounderProps } from "./types";
 
-const blobTop = keyframes`
+const blobTop = gkeyframes`
   50% {
     top: 0;
     left: 50%;
@@ -13,7 +13,7 @@ const blobTop = keyframes`
     left: 0;
   }
 `;
-const blobBottom = keyframes`
+const blobBottom = gkeyframes`
     25%, 50%, 75% {
         top: 50%;
         left: 100%;
@@ -23,7 +23,7 @@ const blobBottom = keyframes`
         left: 50%;
     }
 `;
-const blobLeft = keyframes`
+const blobLeft = gkeyframes`
     25% {
         top: 50%;
         left: 0;
@@ -33,7 +33,7 @@ const blobLeft = keyframes`
         left: 50%;
     }
 `;
-const blobMover = keyframes`
+const blobMover = gkeyframes`
     0%, 100% {
         top: 0;
         left: 50%;
@@ -52,7 +52,7 @@ const blobMover = keyframes`
     }
 `;
 
-const Container = styled.div<RounderProps>`
+const Container = gstyled("div")<RounderProps>`
   width: ${(props) => props.size}px;
   height: ${(props) => props.size}px;
   position: relative;

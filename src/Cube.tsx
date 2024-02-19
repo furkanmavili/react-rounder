@@ -1,9 +1,9 @@
+import { styled as gstyled, keyframes as gkeyframes } from "goober";
 import * as React from "react";
-import styled, { keyframes } from "styled-components";
 import { rounderDefaults } from "./constants";
 import { RounderProps } from "./types";
 
-const animation = keyframes`
+const animation = gkeyframes`
   0%, 70%, 100% {
     transform: scale3D(1, 1, 1);
   } 35% {
@@ -11,7 +11,7 @@ const animation = keyframes`
   } 
 `;
 
-const Container = styled.div<RounderProps>`
+const Container = gstyled("div")<RounderProps>`
   width: ${(props) => props.size}px;
   height: ${(props) => props.size}px;
   & div {
