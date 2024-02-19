@@ -17,8 +17,7 @@ import {
   Jelly,
   Ring,
   Square,
-  Tail,
-  Triangle
+  Tail
 } from "react-rounder";
 export const rounders = [
   {
