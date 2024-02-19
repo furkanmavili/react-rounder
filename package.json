@@ -1,10 +1,16 @@
 {
   "name": "react-rounder",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "A collection of rounding components",
   "author": "Furkan Mavili",
   "license": "MIT",
   "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "package.json",
+    "src",
+    "README.md"
+  ],
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -15,6 +21,7 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "deploy": "npm run build && npm publish",
     "pack": "rm -rf ./*.tgz && npm run build && npm pack .",
     "pub": "npm publish $(node -p \"p=require('./package.json');p.name+'-'+p.version+'.tgz'\")",
     "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
