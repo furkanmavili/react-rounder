@@ -13,18 +13,16 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     }
   },
   "scripts": {
-    "build": "rollup -c",
-    "start": "rollup -c -w",
+    "build": "tsup",
+    "start": "tsup --watch",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "deploy": "npm run build && npm publish",
-    "pack": "rm -rf ./*.tgz && npm run build && npm pack .",
-    "pub": "npm publish $(node -p \"p=require('./package.json');p.name+'-'+p.version+'.tgz'\")",
-    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
+    "deploy": "npm run build && npm publish"
   },
   "keywords": [
     "react-rounder",
@@ -61,6 +59,7 @@
     "rollup-plugin-sass": "^1.2.2",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
+    "tsup": "^8.0.2",
     "typescript": "^4.3.2"
   },
   "peerDependencies": {
