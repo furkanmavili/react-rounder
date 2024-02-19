@@ -1,9 +1,9 @@
 import * as React from "react";
-import styled, { keyframes } from "styled-components";
+import { styled as gstyled, keyframes as gkeyframes } from "goober";
 import { rounderDefaults } from "./constants";
 import { RounderProps } from "./types";
 
-const animation = keyframes`
+const animation = gkeyframes`
   0% {
       transform: rotate(0) scale(1);
       animation-timing-function: ease-in;
@@ -23,14 +23,14 @@ const animation = keyframes`
   }
 `;
 
-const Container = styled.div<RounderProps>`
+const Container = gstyled("div")<RounderProps>`
   width: ${(props) => (props.size ? props.size * 3 : props.size)}px;
   height: ${(props) => (props.size ? props.size * 3 : props.size)}px;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
-const Block = styled.div<RounderProps>`
+const Block = gstyled("div")<RounderProps>`
   position: relative;
   top: 0;
   left: 0;

@@ -1,8 +1,24 @@
 {
   "name": "react-rounder",
-  "version": "1.1.1",
-  "description": "A collection of rounding components based on styled-components ",
-  "main": "./index.js",
+  "version": "2.0.0",
+  "description": "A collection of rounding components",
+  "author": "Furkan Mavili",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "pack": "rm -rf ./*.tgz && npm run build && npm pack .",
+    "pub": "npm publish $(node -p \"p=require('./package.json');p.name+'-'+p.version+'.tgz'\")",
+    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
+  },
   "keywords": [
     "react-rounder",
     "react-spinners",
@@ -19,11 +35,9 @@
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.7",
-    "@types/styled-components": "^5.1.10",
     "@typescript-eslint/eslint-plugin": "^4.26.1",
     "@typescript-eslint/parser": "^4.26.1",
     "babel-core": "^6.26.3",
-    "babel-plugin-styled-components": "^1.12.0",
     "babel-runtime": "^6.26.0",
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
@@ -40,20 +54,8 @@
     "rollup-plugin-sass": "^1.2.2",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
-    "styled-components": "^5.3.0",
-    "typescript": "^4.3.2",
-    "typescript-plugin-styled-components": "^1.5.0"
+    "typescript": "^4.3.2"
   },
-  "scripts": {
-    "build": "rollup -c",
-    "start": "rollup -c -w",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "pack": "rm -rf ./*.tgz && npm run build && cp package.json dist/package.json && cp README.md dist/README.md && npm pack ./dist",
-    "pub": "npm publish $(node -p \"p=require('./package.json');p.name+'-'+p.version+'.tgz'\")",
-    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
-  },
-  "author": "Furkan Mavili",
-  "license": "MIT",
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
@@ -67,5 +69,8 @@
     "*.{js,ts,tsx}": [
       "eslint --fix"
     ]
+  },
+  "dependencies": {
+    "goober": "^2.1.14"
   }
 }

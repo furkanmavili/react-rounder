@@ -5,8 +5,6 @@ import { nodeResolve } from "@rollup/plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
 import pkg from "./package.json";
 import multiInput from "rollup-plugin-multi-input";
-const createStyledComponentsTransformer = require("typescript-plugin-styled-components").default;
-const styledComponentsTransformer = createStyledComponentsTransformer();
 
 export default {
   input: ["src/index.tsx", "src/**/*.tsx"],
@@ -14,7 +12,7 @@ export default {
     {
       dir: "dist",
       plugins: [terser()],
-      format: "cjs",
+      format: "esm",
       exports: "named",
       strict: false
     }
@@ -23,27 +21,12 @@ export default {
     multiInput(),
     nodeResolve(),
     typescript({
-      objectHashIgnoreUnknownHack: true,
-      transformers: [
-        () => ({
-          before: [styledComponentsTransformer]
-        })
-      ]
+      objectHashIgnoreUnknownHack: true
     }),
 
     commonjs(),
     babel({
-      presets: ["@babel/preset-env", "@babel/preset-react"],
-      plugins: [
-        [
-          "babel-plugin-styled-components",
-          {
-            minify: true,
-            pure: true,
-            transpileTemplateLiterals: true
-          }
-        ]
-      ]
+      presets: ["@babel/preset-env", "@babel/preset-react"]
     })
   ],
   external: ["react", "react-dom"]

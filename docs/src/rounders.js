@@ -1,5 +1,6 @@
 import {
-  Ball, Bars,
+  Ball,
+  Bars,
   Blocks,
   Bounce,
   Chase,
@@ -7,8 +8,12 @@ import {
   Climb,
   Cube,
   Dots,
-  DualRing, Filling, Fire,
-  Fold, Gooey, Heart,
+  DualRing,
+  Filling,
+  Fire,
+  Fold,
+  Gooey,
+  Heart,
   Jelly,
   Ring,
   Square,
@@ -95,5 +100,5 @@ export const rounders = [
   {
     title: "Triangle",
     component: Triangle
-  },
+  }
 ];
